@@ -92,7 +92,7 @@ class RegisterController extends Controller
             ->withErrors($validator)
            -> withInput();
         } else {
-            return view('auth.added',['msg' =>'登録いたしました']);
+            return view('auth.added',['msg' =>'登録完了いたしました']);
         }
 
     }
