@@ -40,20 +40,6 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    // protected function validator(array $data)
-    // {
-    //     return Validator::make($data, [
-    //         'username' => ['required', 'string', 'min:2', 'max:12'],
-    //         'mail' => ['required', 'string', 'email', 'min:5', 'max:40', 'unique:users'],
-    //         'password' => ['required', 'string', 'min:8',  'max:20', 'confirmed', 'alpha_num'],
-    //     ]);
-    // }
 
     // バリデーションルールの記述7/3
 
@@ -61,28 +47,13 @@ class RegisterController extends Controller
     {
         $rules = [
             'username' => 'required | string | min:2 | max:12',
-            'mail' => 'required | string | email | min:5 | max:40 | unique:users',
+            'mail' => 'required | string | email | min:5 | max:40 | unique:users,mail',
             'password' => 'required | string | min:8 |  max:20 | confirmed | alpha_num',
+            'password_confirmation' => 'required | same:password',
         ];
 
-        // $massage = [
-        //     'username' => [
-        //     'required' => '名前を入力してください',
-        //     'min:2' => '名前を2文字以上で入力してください',
-        //     'max:12' => '名前を40文字以下で入力してください',
-        //     ],
-        //     'mail' => [
-        //     'required' => 'メールアドレスを入力してください',
-        //     'email' => '正式なメールアドレスを入力してください',
-        //     ],
+        //7/5メールアドレスがもうすでにあるやつでも登録できてしまう→確認したらデータベースに保存されなくなっていた...
 
-        //     'password' => [
-        //     'required' => 'パスワードを入力してください',
-        //     'alpha_num' => '8〜20文字の半角英数字で入力してください',
-        //     ],
-        // ];
-
-        // $validator = Validator::make($request->all(), $rules, $massage);
         $validator = Validator::make($request->all(), $rules);
 
         // バリデーションが失敗したら7/3
@@ -96,11 +67,6 @@ class RegisterController extends Controller
         }
 
     }
-
-    // 7/3ここまで記入。
-    // 実行したけどエラーメッセージとかなんもでねえ！！
-    // バリデーション機能は働いている...?多分
-
 
 
     /**
@@ -118,10 +84,6 @@ class RegisterController extends Controller
         ]);
     }
 
-
-    // public function registerForm(){
-    //     return view("auth.register");
-    // }
 
     public function register(Request $request){
         if($request->isMethod('post')){

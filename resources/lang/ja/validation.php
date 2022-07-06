@@ -31,7 +31,7 @@ return [
     ],
     'boolean'              => 'The :attribute field must be true or false.',
     // 'confirmed'            => 'The :attribute confirmation does not match.',
-    'confirmed'            => ':attributeは英数字で入力してください',
+    'confirmed'            => ':attributeが一致していません。',
     'date'                 => 'The :attribute is not a valid date.',
     'date_format'          => 'The :attribute does not match the format :format.',
     'different'            => 'The :attribute and :other must be different.',
@@ -114,6 +114,7 @@ return [
     'mail' => [
             'required' => 'メールアドレスを入力してください',
             'email' => '正式なメールアドレスを入力してください',
+            ' unique:users,mail' => 'このメールアドレスは既に使用されています。',
             ],
 
     'password' => [
