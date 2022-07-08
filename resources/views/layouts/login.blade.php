@@ -40,7 +40,6 @@
                  </div>
                   </div>
                    </div>
-                   <div>あああああ</div>
 
                             <div class="overlay">
                                 {{-- </label> --}}

@@ -29,7 +29,7 @@ Route::get('/register', 'Auth\RegisterController@register');
 Route::post('/register', 'Auth\RegisterController@register');
 // 7/1バリデーション追加
 Route::post('/register', 'Auth\RegisterController@post');
-
+// Route::post('/register', 'Auth\RegisterController@create');
 Route::get('/added', 'Auth\RegisterController@added');
 Route::post('/added', 'Auth\RegisterController@added');
 

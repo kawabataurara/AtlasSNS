@@ -52,7 +52,6 @@ class RegisterController extends Controller
             'password_confirmation' => 'required | same:password',
         ];
 
-        //7/5メールアドレスがもうすでにあるやつでも登録できてしまう→確認したらデータベースに保存されなくなっていた...
 
         $validator = Validator::make($request->all(), $rules);
 
@@ -98,4 +97,5 @@ class RegisterController extends Controller
     public function added(){
         return view('auth.added');
     }
+
 }
