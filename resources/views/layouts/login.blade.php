@@ -42,7 +42,6 @@
                    </div>
 
                             <div class="overlay">
-                                {{-- </label> --}}
                                             <nav>
                                                 <ul>
                                                     <li><a href="/top">ホーム</a></li>

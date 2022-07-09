@@ -19,7 +19,10 @@
     @endif
     <div class="tweet-box">
         @foreach($posts as $post)
-        <div class="tweet-wrapper">{{ $post->post }}</div>
+        <div class="tweet-wrapper">{{ $post->post }}
+        <input type="image" class="edi-btn" name="submit" src="{{ asset('images/edit.png') }}" alt="編集">
+        <input type="image" class="trash-btn" name="submit" src="{{ asset('images/trash-h.png') }}" alt="削除">
+        </div>
     </form>
 
 </div>

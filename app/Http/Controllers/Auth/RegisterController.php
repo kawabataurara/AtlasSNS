@@ -43,22 +43,14 @@ class RegisterController extends Controller
 
     // バリデーションルールの記述7/3
 
-    // public function validator(Request $request)
     public function validator(array $data){
-        $rules = [
+        return Validator::make($data, [
             'username' => 'required | string | min:2 | max:12',
             'mail' => 'required | string | email | min:5 | max:40 | unique:users,mail',
             'password' => 'required | string | min:8 |  max:20 | confirmed | alpha_num',
             'password_confirmation' => 'required | same:password',
-        ];
+        ]);
 
-        // バリデーションが失敗したら7/3
-            dd($data);
-             Validator::make($data, $rules);
-
-        // else {
-        //     return view('auth.added',['msg' =>'登録完了いたしました']);
-        // }
     }
 
 
@@ -77,33 +69,18 @@ class RegisterController extends Controller
         ]);
     }
 
-
     public function register(Request $request){
-        // $rules = [
-        //     'username' => 'required | string | min:2 | max:12',
-        //     'mail' => 'required | string | email | min:5 | max:40 | unique:users,mail',
-        //     'password' => 'required | string | min:8 |  max:20 | confirmed | alpha_num',
-        //     'password_confirmation' => 'required | same:password',
-        // ];
-        // $validator = Validator::make($request->all(), $rules);
-        //  if ($validator->fails()) {
-        // return redirect('/register')
-        //     ->withErrors($validator)
-        //    -> withInput();
-        // } else {
-        //     return view('auth.added',['msg' =>'登録完了いたしました']);
-        // }
-
         if($request->isMethod('post')){
             $data = $request->input();
-
             $validator = $this->validator($data);
-            dd($validator);
-             if ($validator->fails()) {
+
+            // バリデーションが失敗したら
+        if ($validator->fails()) {
         return redirect('/register')
             ->withErrors($validator)
-           -> withInput();
+            -> withInput();
         }
+        // 入力したものをデータベースに保存
             $this->create($data);
             return redirect('added');
         }

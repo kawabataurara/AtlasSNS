@@ -262,8 +262,17 @@ body{
 }
 
 .tweet-wrapper {
+    max-width: 800px;
     padding: 2rem;
     border-bottom: solid 1px #E6ECF0;
+}
+.trash-btn {
+    max-width: 30px;
+    float: right;
+}
+.edi-btn {
+    max-width: 30px;
+    float: right;
 }
 /* .tweet {
     display: flex;
