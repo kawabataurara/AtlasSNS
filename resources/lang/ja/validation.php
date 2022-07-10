@@ -64,14 +64,15 @@ return [
         'numeric' => 'The :attribute must be at least :min.',
         'file'    => 'The :attribute must be at least :min kilobytes.',
         // 'string'  => 'The :attribute must be at least :min characters.',
-        'string'  => ' :attributeは:min文字以上で入力してください',
+        'string'  => ' :attributeは:min文字以上で入力してください。',
         'array'   => 'The :attribute must have at least :min items.',
     ],
     'not_in'               => 'The selected :attribute is invalid.',
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'The :attribute format is invalid.',
-    'required'             => 'The :attribute field is required.',
+    // 'required'             => 'The :attribute field is required.',
+    'required'             => ':attributeを入力してください',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
     'required_with'        => 'The :attribute field is required when :values is present.',
@@ -137,6 +138,7 @@ return [
     'attributes' => [
       'username' => 'ユーザー名',
       'password' => 'パスワード',
+      'post' => '投稿内容',
     ],
 
 ];

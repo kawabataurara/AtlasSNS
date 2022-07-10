@@ -116,11 +116,31 @@ body{
     pointer-events: none;
     transition: opacity .6s;
 }
+
+.edit {
+    /* z-index: 4;
+    position: fixed;
+    top: 60px;
+    right: 0; */
+    width: 400px;
+    background-color: #fff;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+}
 /* .dli-chevron-up {
     top: 0;
 } */
 
 .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+    width: 248px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+
+}
+.edit.show {
     opacity: 1;
     pointer-events: auto;
     width: 248px;
@@ -262,15 +282,16 @@ body{
 }
 
 .tweet-wrapper {
+    display: flex;
     max-width: 800px;
     padding: 2rem;
     border-bottom: solid 1px #E6ECF0;
 }
-.trash-btn {
+#trash-btn {
     max-width: 30px;
     float: right;
 }
-.edi-btn {
+#edi-btn {
     max-width: 30px;
     float: right;
 }
@@ -291,10 +312,39 @@ body{
     width: 10px;
 } */
 
+
+
  .sp-menu #open.hide {
+     display: none;
+ }
+ .tweet-wrapper #open.hide {
      display: none;
  }
 
  input::-webkit-input-placeholder {
      padding-top: 0.2em;
+ }
+
+
+ .pop {
+     z-index: 4;
+     position: fixed;
+     top: 60px;
+     right: 0;
+     width: 200px;
+     background-color: #fff;
+     text-align: center;
+     opacity: 0;
+     pointer-events: none;
+     transition: opacity .6s;
+ }
+
+ .tweet-wrapper-btn {
+    margin-right: 0;
+    margin-left: auto;
+ }
+
+ .edit-btn, .trash-btn {
+    height: 40px;
+    width: 40px;
  }
