@@ -22,19 +22,13 @@
         <div class="tweet-wrapper">
             {{ $post->post }}
             <div class="tweet-wrapper-btn">
+                <tr>
+                    <td>{{ $post->created_at }}</td>
+                </tr>
                 <input type="image" class="edit-btn" id="open" src="{{ asset('images/edit.png') }}" alt="編集">
 
                 {{-- ララベル課題参考箇所 --}}
-                 <tr>
-            {{-- <td>{{ $post->id }}</td>
-            <td>{{ $post->post }}</td> --}}
-            <td>{{ $post->created_at }}</td>
-            {{-- <td><a class="btn btn-danger" href="/post/{{$post->id}}/delete" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')">削除</a></td> --}}
-        </tr>
-                {{-- <td><input type="image" class="trash-btn" name="" src="{{ asset('images/trash-h.png') }}" href="/post/{{$post->id}}/delete" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')" alt="削除"><td> --}}
-                     {{-- <td><a class="btn btn-danger" href="/post/{{$post->id}}/delete" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')">削除</a></td> --}}
-                     {{-- <td><a class="btn btn-danger" img src="{{ asset('images/trash-h.png') }}" href="/post/{{$post->id}}/delete" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')"></td> --}}
-                     <td><a href="/post/{{$post->id}}/delete"><img src="{{ asset('images/trash-h.png') }}" class="trash-btn" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')" alt="削除"></a></td>
+            <td><a href="/post/{{$post->id}}/delete"><img src="{{ asset('images/trash-h.png') }}" class="trash-btn" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')" alt="削除"></a></td>
             </div>
         </div>
 
