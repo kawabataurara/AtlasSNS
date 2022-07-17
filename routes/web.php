@@ -47,6 +47,7 @@ Route::group(["middleware" => "auth"], function() {
 
     Route::get('/follow-list','PostsController@index');
     Route::get('/follower-list','PostsController@index');
+    Route::post('post/update', 'PostsController@update')->name('posts.index');
     Route::get('post/{id}/delete', 'PostsController@delete');
 
 

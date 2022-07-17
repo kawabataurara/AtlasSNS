@@ -344,7 +344,128 @@ body{
     margin-left: auto;
  }
 
+.edit-btn2 {
+    display: block;
+    height: 40px;
+    max-width: 40px;
+    cursor: pointer;
+    width: 200px;
+    text-align: right;
+    margin: 10px 0 10px auto;
+}
  .edit-btn, .trash-btn {
     height: 40px;
-    width: 40px;
+    max-width: 40px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    margin: 16px auto 0;
  }
+
+
+
+ /* ドットインストールお試し記述 */
+
+ /* #ok,
+ #no {
+     cursor: pointer;
+     width: 200px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     text-align: center;
+     padding: 12px 0;
+     margin: 16px auto 0;
+ } */
+
+ #mask {
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+ }
+
+ #modal {
+     background: #fff;
+     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+     width: 400px;
+     padding: 20px;
+     border-radius: 4px;
+     position: absolute;
+     top: 40px;
+     left: 0;
+     right: 0;
+     margin: 0 auto;
+     transition: transform 0.4s;
+ }
+
+ #mask.hid {
+     display: none;
+ }
+
+ #modal.hid {
+     transform: translate(0, -500px);
+ }
+
+.modal_post {
+    text-align: left;
+}
+
+
+.content{
+    margin: 0 auto;
+    padding: 40px;
+}
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.modal__bg{
+    background: rgba(0,0,0,0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+.modal__content{
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+}
+
+/* カリキュラム参考 */
+.content {
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.modal__bg {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.modal__content {
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
