@@ -1,67 +1,60 @@
 'use strict';
 
 {
-    let open = document.getElementById('open');
-    let close = document.getElementById('close');
-    const overlay = document.querySelector('.overlay');
-    const edit = document.querySelector('.edit');
 
+    const open = document.getElementById('open');
+    const overlay = document.querySelector('.overlay');
+    const close = document.getElementById('close');
 
     open.addEventListener('click', () => {
         overlay.classList.add('show');
         open.classList.add('hide');
     });
+
     close.addEventListener('click', () => {
         overlay.classList.remove('show');
         open.classList.remove('hide');
     });
+    // let open = document.getElementById('open');
+    // let close = document.getElementById('close');
+    // const overlay = document.querySelector('.overlay');
+    // const edit = document.querySelector('.edit');
 
 
-    open.addEventListener('click', () => {
-        edit.classList.add('show');
-        open.classList.add('hide');
-    });
-    close.addEventListener('click', () => {
-        edit.classList.remove('show');
-        open.classList.remove('hide');
-    });
-
-    // const edi = document.getElementById('edi-btn');
-    // const auto = document.getElementById('auto');
-    // const  = document.querySelector('.pop');
-
-    // edi.addEventListener('click', () => {
+    // open.addEventListener('click', () => {
     //     overlay.classList.add('show');
     //     open.classList.add('hide');
     // });
-    // auto.addEventListener('click', () => {
+    // close.addEventListener('click', () => {
     //     overlay.classList.remove('show');
     //     open.classList.remove('hide');
     // });
 
 
-
-    // const ok = document.getElementById('ok');
-    // const no = document.getElementById('no');
-    // const modal = document.getElementById('modal');
-    // const mask = document.getElementById('mask');
-
-    // ok.addEventListener('click', () => {
-    //     modal.classList.remove('hid');
-    //     mask.classList.remove('hid');
+    // open.addEventListener('click', () => {
+    //     edit.classList.add('show');
+    //     open.classList.add('hide');
     // });
-    // no.addEventListener('click', () => {
-    //     modal.classList.add('hid');
-    //     mask.classList.add('hid');
-    // });
-    // mask.addEventListener('click', () => {
-    //     no.click();
+    // close.addEventListener('click', () => {
+    //     edit.classList.remove('show');
+    //     open.classList.remove('hide');
     // });
 
 
-    // const modalopen = document.getElementById('modalopen');
 
-    $(function () {
+}
+
+
+
+$(function () {
+
+    // $('#open').on('click', function () {//.btn_triggerをクリックすると
+    //     $('#open').toggleClass('cross');//.btn_triggerにcrossクラスを付与(ボタンのアニメーション)
+    //     $('.overlay').toggleClass('fade');//.overlayに
+    //     $('body').toggleClass('noscroll');//bodyにnoscrollクラスを付与(スクロールを固定)
+    // });
+
+
         // 編集ボタン(class="js-modal-open")が押されたら発火
         $('.js-modal-open').on('click', function () {
             // モーダルの中身(class="js-modal")の表示
@@ -84,7 +77,5 @@
             $('.js-modal').fadeOut();
             return false;
         });
+
     });
-
-
-}

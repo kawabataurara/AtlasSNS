@@ -51,6 +51,7 @@ class PostsController extends Controller
             ['post' => $up_post]
         );
         return redirect('index');
+        
     }
 
 }

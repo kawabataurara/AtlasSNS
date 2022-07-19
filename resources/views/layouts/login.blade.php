@@ -34,9 +34,13 @@
                     </div>
                         <div class="menu">
                             <div class="sp-menu">
-                                <span class="dli-chevron-down" id="open"></span>
+                                <button class="dli-chevron-down" id="open">
+                                    <span class="bar bar_top"></span>
+                            <span class="bar bar_mid"></span>
+                            <span class="bar bar_bottom"></span>
+                                </button>
                              </div>
-                             <span class="dli-chevron-up" id="close"></span>
+                             {{-- <span class="dli-chevron-up" id="close"></span> --}}
                  </div>
                   </div>
                    </div>
@@ -64,10 +68,7 @@
                         </div>
                         <footer>
                         </footer>
-                        <script src="JavaScriptファイルのURL"></script>
-                        <script src="JavaScriptファイルのURL"></script>
-
-
-                        <script src="{{ asset('/js/login.js') }}"></script>
+                         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                         <script src="{{ asset('/js/login.js') }}"></script>
                     </body>
                     </html>
