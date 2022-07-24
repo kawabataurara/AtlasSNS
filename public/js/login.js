@@ -3,18 +3,30 @@
 {
 
     const open = document.getElementById('open');
+    const search = document.getElementById('search');
     const overlay = document.querySelector('.overlay');
     const close = document.getElementById('close');
+
 
     open.addEventListener('click', () => {
         overlay.classList.add('show');
         open.classList.add('hide');
     });
 
+    search.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    // document.getElementById('close').addEventListener('click', (e) => {
+    //     e.stopPropagation();
+    // });
+
     close.addEventListener('click', () => {
         overlay.classList.remove('show');
         open.classList.remove('hide');
     });
+
+
     // let open = document.getElementById('open');
     // let close = document.getElementById('close');
     // const overlay = document.querySelector('.overlay');

@@ -8,6 +8,8 @@
     <title></title>
     <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!--スマホ,タブレット対応-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!--サイトのアイコン指定-->
@@ -34,11 +36,9 @@
                     </div>
                         <div class="menu">
                             <div class="sp-menu">
-                                <button class="dli-chevron-down" id="open">
-                                    <span class="bar bar_top"></span>
-                            <span class="bar bar_mid"></span>
-                            <span class="bar bar_bottom"></span>
-                                </button>
+                                {{-- <span class="material-icons" id="open">menu</span> --}}
+                                <span class="material-symbols-outlined" id="open">expand_more</span>
+                                {{-- </span> --}}
                              </div>
                              {{-- <span class="dli-chevron-up" id="close"></span> --}}
                  </div>
@@ -46,6 +46,7 @@
                    </div>
 
                             <div class="overlay">
+                                    <span class="material-icons" id="close">close</span>
                                             <nav>
                                                 <ul>
                                                     <li><a href="/top">ホーム</a></li>

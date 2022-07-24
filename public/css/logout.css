@@ -6,5 +6,38 @@ html{
 
 body{
     height: 100%;
-    background: #186AC9;
+    background: #0CEBEB;
+}
+
+.logout-atlas {
+    display: block;
+    padding-top: 120px;
+    margin: 0 auto;
+    width: 25%;
+
+}
+
+.logout-container {
+    margin: 0 auto;
+    text-align: center;
+}
+.welcome-img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+    width: 260px;
+    }
+
+
+.label-text {
+    text-align: left;
+}
+
+.heart-img {
+    display: block;
+    position: relative;
+    width: 8%;
+    top: 280px;
+    left: 20%;
 }

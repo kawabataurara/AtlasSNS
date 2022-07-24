@@ -12,8 +12,8 @@
             <p>フォロワー数</p>
             <p>〇〇名</p>
         </div>
-        
+
          <a href="/followerList" class="follow-btn">フォロワーリスト</a>
     </div>
-    <p class="btn"><a href="">ユーザー検索</a></p>
+    <p class="user-btn" id="search"><a href="/search">ユーザー検索</a></p>
 </div>
