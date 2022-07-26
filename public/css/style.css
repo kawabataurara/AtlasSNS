@@ -36,7 +36,7 @@ button {
     display: flex;
     align-items: center;
     height: 70px;
-    background: -webkit-linear-gradient(left, #c8b1e9, #a8ddd9);
+    background: #0CEBEB;
 }
 
 .head-design {
@@ -149,13 +149,13 @@ button {
     top: 0;
 } */
 
-.overlay.show {
+/* .overlay.show {
     opacity: 1;
     pointer-events: auto;
     width: 248px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 
-}
+} */
 .edit.show {
     opacity: 1;
     pointer-events: auto;
@@ -474,7 +474,7 @@ main {
 
 .overlay.show {
     height: 400px;
-    top: 0;
+    top: 60px;
     opacity: 1;
     pointer-events: auto;
 }

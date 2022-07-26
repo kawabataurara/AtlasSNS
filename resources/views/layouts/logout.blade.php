@@ -21,6 +21,8 @@
 </head>
 <body>
     <div><img src="images/heart.png" class="heart-img"></div>
+    <div><img src="images/heart.png" class="heart-img2"></div>
+
 
   <header>
     <h1><img src="images/atlas.png" class="logout-atlas"></h1>

@@ -13,9 +13,17 @@
 <p class="label-text">{{ Form::label('password') }}</p>
 <p>{{ Form::password('password',['class' => 'input']) }}</p>
 
-<p>{{ Form::submit('ログイン') }}</p>
+{{-- <p>{{ Form::submit('ログイン')}}</p> --}}
+<div class="login-next">
+    <div class="login-position">
+{{-- <p class="login-btn">{{ Form::image("images/loginbtn.png")}}</p> --}}
+<p class="login-btn">{{ Form::submit("")}}</p>
+<img src="images/loginbtn.png"class="login-btn-img">
+<img src="images/next.png" class="next-img">
+</div>
+</div>
 
-<p><a href="/register">新規ユーザーの方はこちら</a></p>
+<p class="new-user"><a href="/register">新規ユーザーの方はこちら</a></p>
 
 </div>
 {!! Form::close() !!}

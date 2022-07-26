@@ -64,6 +64,7 @@
                                 @yield('content')
                             </div >
                                 @include('layouts.sidebar')
+                                {{-- @include('users.search') --}}
 
 
                         </div>
