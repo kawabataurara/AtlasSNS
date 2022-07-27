@@ -50,7 +50,7 @@ body{
 .heart-img {
     display: block;
     position: absolute;
-    width: 8%;
+    width: 5%;
     top: 280px;
     left: 20%;
     animation: rotate 1.1s steps(8) 0s infinite;
@@ -71,10 +71,21 @@ body{
 .heart-img2 {
     display: block;
     position: absolute;
-    width: 5%;
-    top: 100px;
-    right: 25%;
-    animation: rotate 1.1s steps(8) 0s infinite;}
+    width: 4%;
+    top: 60px;
+    right: 30%;
+    animation: rotate 1.1s steps(8) 0s infinite;
+}
+
+.heart-img3 {
+    display: block;
+    position: absolute;
+    width: 3%;
+    top: 400px;
+    right: 22%;
+    animation: rotate 1.1s steps(8) 0s infinite;
+}
+
 
 .login-next {
     box-shadow: 0 4px 0 #e6e6e6;

@@ -32,5 +32,5 @@ class UsersController extends Controller
         $users = $query->get();
 
         return view('search', compact('users', 'keyword'));
-}
+    }
 }

@@ -130,7 +130,7 @@ button {
     text-align: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity .6s;
+    /* transition: opacity .6s; */
 }
 
 .edit {
@@ -477,6 +477,7 @@ main {
     top: 60px;
     opacity: 1;
     pointer-events: auto;
+    transition: opacity .6s;
 }
 
 .overlay #close {

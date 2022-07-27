@@ -20,10 +20,10 @@
 
 @forelse ($users as $user)
     <tr>
-      <td><a href="{{ route('users.searchGet' , $user) }}">
+      <td><a href="{{ route('users.searchGet' , $user) }}">{{ $user->username }}
         {{-- {{ $user->images }} --}}
     </td></a>
-      <td>{{ $user->username }}</td>
+      {{-- <td>{{ $user->username }}</td> --}}
     </tr>
   @empty
     <td>No posts!!</td>

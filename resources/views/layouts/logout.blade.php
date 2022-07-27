@@ -22,6 +22,7 @@
 <body>
     <div><img src="images/heart.png" class="heart-img"></div>
     <div><img src="images/heart.png" class="heart-img2"></div>
+    <div><img src="images/heart.png" class="heart-img3"></div>
 
 
   <header>
