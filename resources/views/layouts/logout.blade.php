@@ -19,16 +19,20 @@
     <link rel="apple-touch-icon-precomposed" href="画像のURL" />
   <!--OGPタグ/twitterカード-->
 </head>
+{{-- <div class="atlas-logout-box"></div> --}}
 <body>
-    <div><img src="images/heart.png" class="heart-img"></div>
-    <div><img src="images/heart.png" class="heart-img2"></div>
-    <div><img src="images/heart.png" class="heart-img3"></div>
+    <div class="atlas-box">
+        <div><img src="images/heart.png" class="heart-img"></div>
+        <div><img src="images/heart.png" class="heart-img2"></div>
+        <div><img src="images/heart.png" class="heart-img3"></div>
+        <div><img src="images/angel.png" class="angel up-down"></div>
 
+        <header>
+            <h1><img src="images/atlas.png" class="logout-atlas"></h1>
+            {{-- <p>Social Network Service</p> --}}
+        </header>
+    </div>
 
-  <header>
-    <h1><img src="images/atlas.png" class="logout-atlas"></h1>
-    {{-- <p>Social Network Service</p> --}}
-  </header>
   <div id="container">
     @yield('content')
   </div>

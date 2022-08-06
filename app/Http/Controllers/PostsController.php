@@ -51,7 +51,13 @@ class PostsController extends Controller
             ['post' => $up_post]
         );
         return redirect('index');
-        
+
     }
+
+    public function show(){
+        // Postモデル経由でpostsテーブルのレコードを取得
+        $posts = Post::get();
+        return view('posts.index', compact('posts'));
+}
 
 }

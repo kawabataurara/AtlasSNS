@@ -4,29 +4,28 @@
 
 <div>
     {{-- <form action="/top" method="post"> --}}
-  <form action="{{ route('users.searchGet') }}" method="GET">
+  <form action="{{ route('users.search') }}" method="GET">
     <input type="text" name="keyword" value="{{ $keyword }}">
     <input type="submit" value="検索">
   </form>
 </div>
 
-{{-- <div class="users">
-    <img src="{{ asset('images/icon2.png') }}" alt="ユーザーアイコン">
-    <div class="users-follow-btn">
-        <a href="">フォロー解除</a>
-        <a href="">フォローする</a>
-    </div>
-</div> --}}
 
 @forelse ($users as $user)
-    <tr>
-      <td><a href="{{ route('users.searchGet' , $user) }}">{{ $user->username }}
-        {{-- {{ $user->images }} --}}
-    </td></a>
-      {{-- <td>{{ $user->username }}</td> --}}
-    </tr>
+    <div class="search-list">
+        <tr>
+            <img src="{{ asset('images/icon2.png') }}" alt="ユーザーアイコン">
+            <td><a href="{{ route('users.search' , $user) }}"class="after-search">{{ $user->username }}
+            {{-- {{ $user->images }} --}}
+            </td></a>
+            {{-- <td>{{ $user->username }}</td> --}}
+            <div class="users-follow-btn">
+            {{-- <a href="">フォロー解除</a> --}}
+            <a href="" class="search-follow">フォローする</a>
+        </tr>
+    </div>
   @empty
-    <td>No posts!!</td>
+    <td>No user</td>
   @endforelse
 
 @endsection

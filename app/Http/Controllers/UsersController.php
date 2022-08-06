@@ -14,11 +14,13 @@ class UsersController extends Controller
         return view('users.profile');
         }
 
-    public function search(){
-        return view('users.search');
-    }
+    // public function search(){
+    //     return view('users.search');
+    // }
 
-    public function searchGet(Request $request){
+    public function search(Request $request){
+        // return view('users.search');
+
         $keyword = $request->input('keyword');
 
         $query = User::query();
@@ -26,11 +28,11 @@ class UsersController extends Controller
         if(!empty($keyword)) {
             $query->
             where('username', 'LIKE', "%{$keyword}%");
-                // ->orWhere('author', 'LIKE', "%{$keyword}%");
+                // ->orWhere('username', 'LIKE', "%{$keyword}%");
         }
 
         $users = $query->get();
 
-        return view('search', compact('users', 'keyword'));
+        return view('users.search', compact('users', 'keyword'));
     }
 }

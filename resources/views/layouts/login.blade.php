@@ -32,7 +32,7 @@
                 <div class="header-list">
                     <div class="user-profile">
                     <p class="username-box">{{ Auth::user()->username }}さん</p>
-                    <img src="{{ asset('images/icon1.png') }} " alt="icon1">
+                    <img src="{{ Auth::user()->images }} " alt="icon1">
                     </div>
                         <div class="menu">
                             <div class="sp-menu">

@@ -20,11 +20,17 @@
     @foreach($posts as $post)
     <div class="tweet-box">
         <div class="tweet-wrapper">
-
             <tr>
-                <td> {{ $post->post }}</td>
-                <td>{{ $post->created_at }}</td>
+                <td>{{ Auth::user()->username }}　</td>
+                {{-- <p><td>{{ $post->user->username }}</td></p> --}}
+                {{-- <p class="username-box"><td>{{ Auth::user()->username }}</td></p> --}}
+                {{-- <p>名前：{{ $post->user->username }}</p> --}}
+                <p><td>{{ $post->post }}</td></p>
             </tr>
+            {{-- <tr>
+                <p class="postbox"><td> {{ $post->post }}</td></p>
+                <p class="createbox"><td>{{ $post->created_at }}</td></p>
+            </tr>  --}}
             <div class="content tweet-wrapper-btn">
                 <a class="js-modal-open" post="{{ $post->post }}" post_id="{{ $post->id }}" ><img src="{{ asset('images/edit.png') }}" alt="編集">
                 </a>
